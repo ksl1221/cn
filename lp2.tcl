@@ -64,7 +64,7 @@ proc finish {} {
         close $nam
         exec nam out.nam &
 		exec echo "The number of ping messages lost is" &
-		exec grep -c "^d" out.tr | cut -d " " -f 5 | grep -c "ping" &
+		exec grep  "^d" out.tr | cut -d " " -f 5 | grep -c "ping" &
         exit 0
 }
 
